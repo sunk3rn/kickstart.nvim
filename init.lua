@@ -70,6 +70,7 @@ require('lazy').setup({
   -- Git related plugins
   'tpope/vim-fugitive',
   'tpope/vim-rhubarb',
+  'jiangmiao/auto-pairs',
 
   -- Detect tabstop and shiftwidth automatically
   'tpope/vim-sleuth',
@@ -233,6 +234,9 @@ require('lazy').setup({
 -- [[ Setting options ]]
 -- See `:help vim.o`
 -- NOTE: You can change these options as you wish!
+
+-- cursorline
+vim.opt.cursorline = true
 
 -- Set highlight on search
 vim.o.hlsearch = false
