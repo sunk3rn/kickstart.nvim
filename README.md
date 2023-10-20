@@ -1,23 +1,5 @@
 # kickstart.nvim
 
-https://github.com/kdheepak/kickstart.nvim/assets/1813121/f3ff9a2b-c31f-44df-a4fa-8a0d7b17cf7b
-
-### Introduction
-
-A starting point for Neovim that is:
-
-* Small
-* Single-file (with examples of moving to multi-file)
-* Documented
-* Modular
-
-This repo is meant to be used by **YOU** to begin your Neovim journey; remove the things you don't use and add what you miss.
-
-Kickstart.nvim targets *only* the latest ['stable'](https://github.com/neovim/neovim/releases/tag/stable) and latest ['nightly'](https://github.com/neovim/neovim/releases/tag/nightly) of Neovim. If you are experiencing issues, please make sure you have the latest versions.
-
-Distribution Alternatives:
-- [LazyVim](https://www.lazyvim.org/): A delightful distribution maintained by @folke (the author of lazy.nvim, the package manager used here)
-
 ### Installation
 
 > **NOTE** 
@@ -36,17 +18,10 @@ Neovim's configurations are located under the following paths, depending on your
 | MacOS | `$XDG_CONFIG_HOME/nvim`, `~/.config/nvim` |
 | Windows | `%userprofile%\AppData\Local\nvim\` |
 
-Clone kickstart.nvim:
+## Unix
 
 ```sh
-# on Linux and Mac
-git clone https://github.com/nvim-lua/kickstart.nvim.git "${XDG_CONFIG_HOME:-$HOME/.config}"/nvim
-```
-
-
-```
-# on Windows
-git clone https://github.com/nvim-lua/kickstart.nvim.git %userprofile%\AppData\Local\nvim\ 
+git clone git@github.com:sunk3rn/kickstart.nvim.git "${XDG_CONFIG_HOME:-$HOME/.config}"/nvim
 ```
 
 ### Post Installation
@@ -56,13 +31,6 @@ Run the following command and then **you are ready to go**!
 ```sh
 nvim --headless "+Lazy! sync" +qa
 ```
-
-### Recommended Steps
-
-[Fork](https://docs.github.com/en/get-started/quickstart/fork-a-repo) this repo (so that you have your own copy that you can modify) and then installing you can install to your machine using the methods above.
-
-> **NOTE**  
-> Your fork's url will be something like this: `https://github.com/<your_github_username>/kickstart.nvim.git`
 
 ### Configuration And Extension
 
@@ -147,9 +115,14 @@ Each PR, especially those which increase the line count, should have a descripti
   * Current iteration of kickstart (coming soon)
   * Here is one about the previous iteration of kickstart: [video introduction to Kickstart.nvim](https://youtu.be/stqUbv-5u2s). Note the install via init.lua no longer works as specified. Please follow the install instructions in this file instead as they're up to date.
 
-### Windows Installation
+<details><summary>Windows Installation</summary><p>
 
-Installation may require installing build tools, and updating the run command for `telescope-fzf-native`
+## Windows
+```
+git clone git@github.com:sunk3rn/kickstart.nvim.git %userprofile%\AppData\Local\nvim\ 
+```
+
+  Installation may require installing build tools, and updating the run command for `telescope-fzf-native`
 
 See `telescope-fzf-native` documentation for [more details](https://github.com/nvim-telescope/telescope-fzf-native.nvim#installation)
 
@@ -160,4 +133,4 @@ This requires:
 ```lua
 {'nvim-telescope/telescope-fzf-native.nvim', build = 'cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build' }
 ```
-
+</p></details>
